@@ -1,0 +1,192 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background: #f4f4f4;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background: linear-gradient(to right, #4b79a1, #283e51);
+  color: #fff;
+  padding: 10px 20px;
+  z-index: 1000;
+}
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  height: 40px;
+  margin-right: 10px;
+}
+nav a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+h1 {
+  margin: 0;
+  font-size: 1.5em;
+  display: flex;
+  align-items: center;
+}
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+.message {
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+}
+.message.success {
+  background: #d4edda;
+  color: #155724;
+}
+.message.error {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+/* Hero Slider */
+#hero-slider {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+#hero-slider .slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#hero-slider .slide-content {
+  background: rgba(0,0,0,0.4);
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+}
+#hero-slider .slide.active {
+  opacity: 1;
+}
+
+/* Course grid */
+.courses-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.course-card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+.course-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.btn {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+}
+
+/* Cart table */
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.cart-table th, .cart-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+.cart-table th {
+  background: #f2f2f2;
+}
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.admin-table th, .admin-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+.admin-table th {
+  background: #f2f2f2;
+}
+
+/* Forms */
+form {
+  max-width: 500px;
+  margin: 20px 0;
+  background: #fff;
+  padding: 20px;
+  border-radius:8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+form label {
+  display: block;
+  margin-top: 10px;
+}
+form input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+form input:focus {
+  outline: none;
+  border-color: #4CAF50;
+}
+
+/* Fade-in sections */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Responsive adjustments */
+@media(max-width: 600px){
+  nav {
+    display: flex;
+    flex-direction: column;
+  }
+}
